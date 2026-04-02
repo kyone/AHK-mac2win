@@ -1,0 +1,6 @@
+#Include "macOS-navigation.ahk"
+#Include "macOS-QWERTY-accents.ahk"
+#Include "ignore-windows-shortcuts.ahk"
+#Include "macOS-hot-corners.ahk"
+#Include "app-shortcuts.ahk"
+#Include "wording-shortcuts.ahk"
