@@ -13,6 +13,9 @@
 
 ; ----------
 ; Cédille and e-dans-l'o characters can be handled more easily
+;
+; Win + C ⇒ ç
+; Win + Q ⇒ œ
 ; ----------
 #c:: Send "ç"
 #+c:: Send "Ç"
@@ -30,6 +33,12 @@ global gHandledAccents := Map("acute", Map("a","á", "e","é", "i","í", "o","ó
 
 ; ----------
 ; Hotkeys to activate the accented state – à la macOS's dead keys
+;
+; Win + ` + A ⇒ à
+; Win + E + E ⇒ é
+; Win + I + O ⇒ ô
+; Win + U + I ⇒ ï
+; Win + N + N ⇒ ñ
 ; ----------
 #e:: global gCurrentAccent := "acute"      ; Win + e → acute accent
 #`:: global gCurrentAccent := "grave"      ; Win + ` → grave accent
