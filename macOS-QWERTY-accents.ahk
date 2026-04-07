@@ -17,11 +17,7 @@
 ; Win + C ⇒ ç
 ; Win + Q ⇒ œ
 ; ----------
-#c:: Send "ç"
-#+c:: Send "Ç"
-#q:: Send "œ"
-#+q:: Send "Œ"
-#+2:: Send "€"
+#Include "macOS-all-optioned-characters.ahk"
 
 global gCurrentAccent := ""
 
