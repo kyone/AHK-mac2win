@@ -30,11 +30,11 @@ global gHandledAccents := Map("acute", Map("a","á", "e","é", "i","í", "o","ó
 ; ----------
 ; Hotkeys to activate the accented state – à la macOS's dead keys
 ;
-; Win + ` + A ⇒ à
-; Win + E + E ⇒ é
-; Win + I + O ⇒ ô
-; Win + U + I ⇒ ï
-; Win + N + N ⇒ ñ
+; Win + ` then Shift + A ⇒ À
+; Win + E then E ⇒ é
+; Win + I then O ⇒ ô
+; Win + U then I ⇒ ï
+; Win + N then N ⇒ ñ
 ; ----------
 #e:: global gCurrentAccent := "acute"      ; Win + e → acute accent
 #`:: global gCurrentAccent := "grave"      ; Win + ` → grave accent
