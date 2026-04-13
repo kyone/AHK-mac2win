@@ -3,6 +3,7 @@
 ; ----------
 
 ::ajh::aujourd'hui
+::bcp::beaucoup
 ::qqch::quelque chose
 ::qqn::quelqu'un
 ::qq::quelque
