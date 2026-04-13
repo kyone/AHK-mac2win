@@ -4,15 +4,15 @@
 
 ::ajh::aujourd'hui
 ::bcp::beaucoup
+::np::pas de soucis
+::pb::problème
+::pe::peut-être
+::qq::quelque
 ::qqch::quelque chose
 ::qqn::quelqu'un
-::qq::quelque
 ::stp::s'il-te-plaît
 ::svp::s'il-vous-plaît
 ::tkt::ne t'inquiète pas
-::pb::problème
-::np::pas de soucis
-::pe::peut-être
 
 ::<->::↔
 ::->::→
