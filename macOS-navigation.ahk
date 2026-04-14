@@ -134,8 +134,10 @@
 
 ; ----------
 ; Alt + F ⇒ Find
+; Alt + Shift + F ⇒ Find
 ; ----------
 !f:: Send "^f"
+!+f:: Send "^+f"
 
 ; ----------
 ; Alt + R ⇒ Refresh
