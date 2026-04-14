@@ -153,3 +153,27 @@
 ; Alt + L ⇒ URL bar
 ; ----------
 !l:: Send "^l"
+
+; ----------
+; Win + Alt + 2 ⇒ Split view
+; Win + Alt + 1 ⇒ Close splitted view
+; ----------
+$#!2:: {
+    if (WinActive("ahk_exe Arc.exe")) {
+        Send "^+="
+    } else if (WinActive("ahk_exe sublime_text.exe")) {
+        Send "!+2"
+    } else {
+        Send "#!2"
+    }
+}
+
+$#!1:: {
+    if (WinActive("ahk_exe Arc.exe")) {
+        Send "^+-"
+    } else if (WinActive("ahk_exe sublime_text.exe")) {
+        Send "!+1"
+    } else {
+        Send "#!1"
+    }
+}
