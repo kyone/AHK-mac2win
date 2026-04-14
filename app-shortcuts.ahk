@@ -49,6 +49,28 @@ $!+d:: {
 }
 
 ; ----------
+; Arc
+;
+; Alt + [ ⇒ Go back in history
+; Alt + ] ⇒ Go forward in history
+; ----------
+$![:: {
+    if WinActive("ahk_exe Arc.exe") {
+        Send "!{Left}"
+    } else {
+        Send "!["
+    }
+}
+
+$!]:: {
+    if WinActive("ahk_exe Arc.exe") {
+        Send "!{Right}"
+    } else {
+        Send "!]"
+    }
+}
+
+; ----------
 ; Media Keys
 ;
 ; Home ⇒ Previous track ⏮️
