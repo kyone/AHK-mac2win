@@ -27,7 +27,7 @@
 ;
 ; Alt + D ⇒ Mute (Google Meet macOS shortcut)
 ; ----------
-!d:: {
+$!d:: {
     if WinActive("ahk_exe ms-teams.exe") {
         Send "^+m"
     } else {
@@ -40,7 +40,7 @@
 ;
 ; Alt + Shift + D ⇒ Send mail (Apple Mail shortcut)
 ; ----------
-!+d:: {
+$!+d:: {
     if WinActive("ahk_exe olk.exe") {
         Send "^{Enter}"
     } else {
