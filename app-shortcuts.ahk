@@ -10,11 +10,11 @@
 ; ----------
 ; Explorer app
 ;
-; (left) Alt + Shift + H ⇒ Open Home page
-; (left) Alt + Down ⇒ Open anything
+; Alt + Shift + H ⇒ Open Home page
+; Alt + Down ⇒ Open anything
 ; ----------
-<!+h:: Run "explorer.exe"
-<!Down:: {
+!+h:: Run "explorer.exe"
+!Down:: {
     if WinActive("ahk_exe explorer.exe") {
         Send "{Enter}"
     } else {

@@ -15,18 +15,18 @@
 #+Right::Send "^+{Right}"
 
 ; ----------
-; (left) Alt + ← ⇒ Jump to the beginning of the line
-; (left) Alt + Shift + ← ⇒ Select to the beginning of the line
+; Alt + ← ⇒ Jump to the beginning of the line
+; Alt + Shift + ← ⇒ Select to the beginning of the line
 ; ----------
-<!Left:: Send "{Home}"
-<!+Left:: Send "+{Home}"
+!Left:: Send "{Home}"
+!+Left:: Send "+{Home}"
 
 ; ----------
-; (left) Alt + → ⇒ Jump to the end of the line
-; (left) Alt + Shift + → ⇒ Select to the end of the line
+; Alt + → ⇒ Jump to the end of the line
+; Alt + Shift + → ⇒ Select to the end of the line
 ; ----------
-<!Right:: Send "{End}"
-<!+Right:: Send "+{End}"
+!Right:: Send "{End}"
+!+Right:: Send "+{End}"
 
 ; ----------
 ; Ctrl + Win + ← ⇒ Jump to the beginning of the document
@@ -43,15 +43,15 @@
 ^#+Right::Send "^+{End}"
 
 ; ----------
-; (left) Alt + C ⇒ Copy
-; (left) Alt + V ⇒ Paste
-; (left) Alt + X ⇒ Cut
-; (left) Alt + A ⇒ Select All
+; Alt + C ⇒ Copy
+; Alt + V ⇒ Paste
+; Alt + X ⇒ Cut
+; Alt + A ⇒ Select All
 ; ----------
-<!c:: Send "^c"
-<!v:: Send "^v"
-<!x:: Send "^x"
-<!a:: Send "^a"
+!c:: Send "^c"
+!v:: Send "^v"
+!x:: Send "^x"
+!a:: Send "^a"
 
 ; ----------
 ; Win + Backspace ⇒ Delete previous word
@@ -61,38 +61,38 @@
 #Delete::Send "^{Delete}"
 
 ; ----------
-; (left) Alt + Backspace ⇒ Delete the whole line
+; Alt + Backspace ⇒ Delete the whole line
 ; ----------
-<!Backspace:: Send "+{Home}{Backspace}"
+!Backspace:: Send "+{Home}{Backspace}"
 
 ; ----------
-; (left) Alt + S ⇒ Save
-; (left) Alt + Z ⇒ Undo
-; (left) Alt + Shift + Z ⇒ Redo
+; Alt + S ⇒ Save
+; Alt + Z ⇒ Undo
+; Alt + Shift + Z ⇒ Redo
 ; ----------
-<!s:: Send "^s"
-<!z:: Send "^z"
-<!+z:: Send "^+z"
+!s:: Send "^s"
+!z:: Send "^z"
+!+z:: Send "^+z"
 
 ; ----------
-; (left) Alt + N ⇒ New window
-; (left) Alt + T ⇒ New tab
+; Alt + N ⇒ New window
+; Alt + T ⇒ New tab
 ; ----------
-<!n:: Send "^n"
-<!+n:: Send "^+n"
-<!t:: Send "^t"
+!n:: Send "^n"
+!+n:: Send "^+n"
+!t:: Send "^t"
 
 ; ----------
-; (left) Alt + Q ⇒ Quit app
+; Alt + Q ⇒ Quit app
 ; ----------
-<!q:: {
+!q:: {
     Send "!{f4}"
 }
 
 ; ----------
-; (left) Alt + W ⇒ Close window
+; Alt + W ⇒ Close window
 ; ----------
-<!w:: {
+!w:: {
     ; Arc
     if (WinActive("ahk_exe Arc.exe")) {
         Send "^w"
@@ -104,10 +104,10 @@
 ; ----------
 ; Navigate between tabs
 ;
-; (right) Alt + Shift + [ ⇒ Previous tab
-; (right) Alt + Shift + ] ⇒ Next tab
+; Alt + Shift + [ ⇒ Previous tab
+; Alt + Shift + ] ⇒ Next tab
 ; ----------
-!>+[:: {
+!+[:: {
     ; Term and Explorer
     if (WinActive("ahk_exe explorer.exe") || WinActive("ahk_exe WindowsTerminal.exe")) {
         Send "^{Tab}"
@@ -120,7 +120,7 @@
     }
 }
 
-!>+]:: {
+!+]:: {
     ; Term and Explorer
     if (WinActive("ahk_exe explorer.exe") || WinActive("ahk_exe WindowsTerminal.exe")) {
         Send "^+{Tab}"
@@ -133,21 +133,21 @@
 }
 
 ; ----------
-; (left) Alt + F ⇒ Find
+; Alt + F ⇒ Find
 ; ----------
-<!f:: Send "^f"
+!f:: Send "^f"
 
 ; ----------
-; (left) Alt + R ⇒ Refresh
+; Alt + R ⇒ Refresh
 ; ----------
-<!r:: Send "{f5}"
+!r:: Send "{f5}"
 
 ; ----------
-; (left) Alt + , ⇒ Settings (for supporting apps)
+; Alt + , ⇒ Settings (for supporting apps)
 ; ----------
-<!,:: Send "^,"
+!,:: Send "^,"
 
 ; ----------
-; (left) Alt + L ⇒ URL bar
+; Alt + L ⇒ URL bar
 ; ----------
-<!l:: Send "^l"
+!l:: Send "^l"
