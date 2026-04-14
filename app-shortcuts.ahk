@@ -53,6 +53,7 @@ $!+d:: {
 ;
 ; Alt + [ ⇒ Go back in history
 ; Alt + ] ⇒ Go forward in history
+; Alt + Shift + C ⇒ Copy current page's URL
 ; ----------
 $![:: {
     if WinActive("ahk_exe Arc.exe") {
@@ -67,6 +68,14 @@ $!]:: {
         Send "!{Right}"
     } else {
         Send "!]"
+    }
+}
+
+$!+c:: {
+    if WinActive("ahk_exe Arc.exe") {
+        Send "^+c"
+    } else {
+        Send "!+c"
     }
 }
 
