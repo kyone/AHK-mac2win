@@ -142,7 +142,7 @@
 ; ----------
 ; Alt + R ⇒ Refresh
 ; ----------
-!r:: Send "{f5}"
+!r:: Send "^r"
 
 ; ----------
 ; Alt + , ⇒ Settings (for supporting apps)
