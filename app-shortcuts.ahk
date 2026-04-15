@@ -37,14 +37,23 @@ $!d:: {
 
 ; ----------
 ; MS Outlook
-;
-; Alt + Shift + D ⇒ Send mail (Apple Mail shortcut)
+; à la Apple Mail's shortcuts
+; Alt + Shift + D ⇒ Send mail
+; Alt + Shift + R ⇒ Synchronize inbox / Force Refresh (Ctrl + Shift + R)
 ; ----------
 $!+d:: {
     if WinActive("ahk_exe olk.exe") {
         Send "^{Enter}"
     } else {
         Send "!+d"
+    }
+}
+
+!+r:: {
+    if WinActive("ahk_exe olk.exe") {
+        Send "{F9}"
+    } else {
+        Send "^+r"
     }
 }
 
