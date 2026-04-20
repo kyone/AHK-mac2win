@@ -3,8 +3,8 @@
 ; ----------
 
 ::ajh::aujourd'hui
-::cad::c'est-à-dire
 ::bcp::beaucoup
+::cad::c'est-à-dire
 ::np::pas de soucis
 ::pb::problème
 ::pe::peut-être
