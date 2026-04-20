@@ -8,7 +8,7 @@
 ; ----------
 
 CoordMode "Mouse", "Screen"
-SetTimer(CheckCorner, 50)
+SetTimer(CheckCorner, 500)
 
 GetMouseMonitorInfo() {
     MouseGetPos &mx, &my
