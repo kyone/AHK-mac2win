@@ -79,7 +79,6 @@
 ; Alt + T ⇒ New tab
 ; ----------
 !n:: Send "^n"
-!+n:: Send "^+n"
 !t:: Send "^t"
 
 ; ----------
