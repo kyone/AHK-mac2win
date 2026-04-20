@@ -5,6 +5,7 @@
 ::ajh::aujourd'hui
 ::bcp::beaucoup
 ::cad::c'est-à-dire
+::dsl::désolé
 ::np::pas de soucis
 ::pb::problème
 ::pe::peut-être
