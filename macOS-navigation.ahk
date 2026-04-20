@@ -140,8 +140,10 @@
 
 ; ----------
 ; Alt + R ⇒ Refresh
+; Alt + Shift + R ⇒ Force Refresh
 ; ----------
 !r:: Send "^r"
+!+r:: Send "^+r"
 
 ; ----------
 ; Alt + , ⇒ Settings (for supporting apps)
