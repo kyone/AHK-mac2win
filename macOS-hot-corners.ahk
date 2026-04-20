@@ -10,18 +10,57 @@
 CoordMode "Mouse", "Screen"
 SetTimer(CheckCorner, 50)
 
-CheckCorner() {
-    MouseGetPos &x, &y
-    trigger := 10
+GetMouseMonitorInfo() {
+    MouseGetPos &mx, &my
 
-    ; Top Right corner
-    if (x >= A_ScreenWidth - trigger && y <= trigger && GetKeyState("Alt", "P")) {
-        MouseMove A_ScreenWidth / 2, A_ScreenHeight / 2
-        Sleep 150
-        DllCall "LockWorkStation"
+    monitorCount := MonitorGetCount()
+    Loop monitorCount {
+        i := A_Index
+        MonitorGet i, &l, &t, &r, &b
+        if (mx >= l && mx < r && my >= t && my < b) {
+            position := ""
+            threshold := 10
+
+            if (my <= t + threshold) {
+                position .= "top"
+            } else if (my >= b - threshold) {
+                position .= "bottom"
+            }
+
+            if (mx <= l + threshold) {
+                position .= "left"
+            } else if (mx >= r - threshold) {
+                position .= "right"
+            }
+
+            return {
+                index: i,
+                left: l,
+                top: t,
+                right: r,
+                bottom: b,
+                width: r - l,
+                height: b - t,
+                mouse: {position: position, x: mx, y: my}
+            }
+        }
     }
-    ; Bottom Right corner
-    else if (x >= A_ScreenWidth - trigger && y >= A_ScreenHeight - trigger && GetKeyState("Alt", "P")) {
-        Send "#d"
+    return false
+}
+
+
+CheckCorner() {
+    info := GetMouseMonitorInfo()
+    if (info) {
+        ; Top Right corner
+        if (info.mouse.position = "topright" && GetKeyState("Alt", "P")) {
+            MouseMove A_ScreenWidth / 2, A_ScreenHeight / 2
+            Sleep 150
+            DllCall "LockWorkStation"
+        }
+        ; Bottom Right corner
+        else if (info.mouse.position = "bottomright" && GetKeyState("Alt", "P")) {
+            Send "#d"
+        }
     }
 }
