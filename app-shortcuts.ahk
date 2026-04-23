@@ -10,10 +10,10 @@
 ; ----------
 ; Explorer app
 ;
-; Alt + Shift + H ⇒ Open Home page
+; Alt + Shift + H ⇒ Open Home page à la macOS
 ; Alt + Down ⇒ Open anything
 ; ----------
-!+h:: Run "explorer.exe"
+!+h:: Run "explorer.exe shell:Profile"
 !Down:: {
     if WinActive("ahk_exe explorer.exe") {
         Send "{Enter}"
