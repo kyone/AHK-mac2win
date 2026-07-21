@@ -72,7 +72,7 @@
 ; ----------
 !s:: Send "^s"
 !z:: Send "^z"
-!+z:: Send "^+z"
+!+z:: Send "^y"
 
 ; ----------
 ; Alt + N ⇒ New window
