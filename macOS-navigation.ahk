@@ -137,6 +137,7 @@
 ; ----------
 !f:: Send "^f"
 !+f:: Send "^+f"
+!e:: Send "{F3}"
 
 ; ----------
 ; Alt + R ⇒ Refresh
