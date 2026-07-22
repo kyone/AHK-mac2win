@@ -79,7 +79,14 @@
 ; Alt + T ⇒ New tab
 ; ----------
 !n:: Send "^n"
-!t:: Send "^t"
+!t:: {
+    ; SublimeText ⇒ Quick open
+    if (WinActive("ahk_exe sublime_text.exe")) {
+        Send "^p"
+    } else {
+        Send "^t"
+    }
+}
 
 ; ----------
 ; Alt + Q ⇒ Quit app
