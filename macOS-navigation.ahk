@@ -80,12 +80,7 @@
 ; ----------
 !n:: Send "^n"
 !t:: {
-    ; SublimeText ⇒ Quick open
-    if (WinActive("ahk_exe sublime_text.exe")) {
-        Send "^p"
-    } else {
-        Send "^t"
-    }
+    Send "^t"
 }
 
 ; ----------
@@ -99,12 +94,7 @@
 ; Alt + W ⇒ Close window
 ; ----------
 !w:: {
-    ; Arc
-    if (WinActive("ahk_exe Arc.exe")) {
-        Send "^w"
-    } else {
-        Send "^{f4}"
-    }
+    Send "^{f4}"
 }
 
 ; ----------
@@ -114,28 +104,11 @@
 ; Alt + Shift + ] ⇒ Next tab
 ; ----------
 !+[:: {
-    ; Term and Explorer
-    if (WinActive("ahk_exe explorer.exe") || WinActive("ahk_exe WindowsTerminal.exe")) {
-        Send "^{Tab}"
-    } ; Arc
-    ;else if (WinActive("ahk_exe Arc.exe")) {
-    ;    Send "^!{Up}"
-    ;}
-    else {
-        Send "^{PgUp}"
-    }
+    Send "^{PgUp}"
 }
 
 !+]:: {
-    ; Term and Explorer
-    if (WinActive("ahk_exe explorer.exe") || WinActive("ahk_exe WindowsTerminal.exe")) {
-        Send "^+{Tab}"
-    ;} ; Arc
-    ;else if (WinActive("ahk_exe Arc.exe")) {
-    ;    Send "^!{Down}"
-    } else {
-        Send "^{PgDn}"
-    }
+    Send "^{PgDn}"
 }
 
 ; ----------
@@ -168,21 +141,9 @@
 ; Win + Alt + 1 ⇒ Close splitted view
 ; ----------
 $#!2:: {
-    if (WinActive("ahk_exe Arc.exe")) {
-        Send "^+="
-    } else if (WinActive("ahk_exe sublime_text.exe")) {
-        Send "!+2"
-    } else {
-        Send "#!2"
-    }
+    Send "#!2"
 }
 
 $#!1:: {
-    if (WinActive("ahk_exe Arc.exe")) {
-        Send "^+-"
-    } else if (WinActive("ahk_exe sublime_text.exe")) {
-        Send "!+1"
-    } else {
-        Send "#!1"
-    }
+    Send "#!1"
 }
