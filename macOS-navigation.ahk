@@ -4,43 +4,43 @@
 ; Win + ← ⇒ Jump to the previous word
 ; Win + → ⇒ Jump to the next word
 ; ----------
-#Left::Send "^{Left}"
-#Right::Send "^{Right}"
+$#Left::Send "^{Left}"
+$#Right::Send "^{Right}"
 
 ; ----------
 ; Win + Shift + ← ⇒ Select to the previous word
 ; Win + Shift + → ⇒ Select to the next word
 ; ----------
-#+Left::Send "^+{Left}"
-#+Right::Send "^+{Right}"
+$#+Left::Send "^+{Left}"
+$#+Right::Send "^+{Right}"
 
 ; ----------
 ; Alt + ← ⇒ Jump to the beginning of the line
 ; Alt + Shift + ← ⇒ Select to the beginning of the line
 ; ----------
-!Left:: Send "{Home}"
-!+Left:: Send "+{Home}"
+$!Left:: Send "{Home}"
+$!+Left:: Send "+{Home}"
 
 ; ----------
 ; Alt + → ⇒ Jump to the end of the line
 ; Alt + Shift + → ⇒ Select to the end of the line
 ; ----------
-!Right:: Send "{End}"
-!+Right:: Send "+{End}"
+$!Right:: Send "{End}"
+$!+Right:: Send "+{End}"
 
 ; ----------
 ; Ctrl + Win + ← ⇒ Jump to the beginning of the document
 ; Ctrl + Win + Shift + ← ⇒ Select to the beginning of the document
 ; ----------
-^#Left::Send "^{Home}"
-^#+Left::Send "^+{Home}"
+$^#Left::Send "^{Home}"
+$^#+Left::Send "^+{Home}"
 
 ; ----------
 ; Ctrl + Win + → ⇒ Jump to the end of the document
 ; Ctrl + Win + Shift + → ⇒ Select to the end of the document
 ; ----------
-^#Right::Send "^{End}"
-^#+Right::Send "^+{End}"
+$^#Right::Send "^{End}"
+$^#+Right::Send "^+{End}"
 
 ; ----------
 ; Alt + C ⇒ Copy
@@ -48,52 +48,52 @@
 ; Alt + X ⇒ Cut
 ; Alt + A ⇒ Select All
 ; ----------
-!c:: Send "^c"
-!v:: Send "^v"
-!x:: Send "^x"
-!a:: Send "^a"
+$!c:: Send "^c"
+$!v:: Send "^v"
+$!x:: Send "^x"
+$!a:: Send "^a"
 
 ; ----------
 ; Win + Backspace ⇒ Delete previous word
 ; Win + Delete ⇒ Delete next word
 ; ----------
-#Backspace::Send "^{Backspace}"
-#Delete::Send "^{Delete}"
+$#Backspace::Send "^{Backspace}"
+$#Delete::Send "^{Delete}"
 
 ; ----------
 ; Alt + Backspace ⇒ Delete the whole line
 ; ----------
-!Backspace:: Send "+{Home}{Backspace}"
+$!Backspace:: Send "+{Home}{Backspace}"
 
 ; ----------
 ; Alt + S ⇒ Save
 ; Alt + Z ⇒ Undo
 ; Alt + Shift + Z ⇒ Redo
 ; ----------
-!s:: Send "^s"
-!z:: Send "^z"
-!+z:: Send "^y"
+$!s:: Send "^s"
+$!z:: Send "^z"
+$!+z:: Send "^y"
 
 ; ----------
 ; Alt + N ⇒ New window
 ; Alt + T ⇒ New tab
 ; ----------
-!n:: Send "^n"
-!t:: {
+$!n:: Send "^n"
+$!t:: {
     Send "^t"
 }
 
 ; ----------
 ; Alt + Q ⇒ Quit app
 ; ----------
-!q:: {
+$!q:: {
     Send "!{f4}"
 }
 
 ; ----------
 ; Alt + W ⇒ Close window
 ; ----------
-!w:: {
+$!w:: {
     Send "^{f4}"
 }
 
@@ -103,11 +103,11 @@
 ; Alt + Shift + [ ⇒ Previous tab
 ; Alt + Shift + ] ⇒ Next tab
 ; ----------
-!+[:: {
+$!+[:: {
     Send "^{PgUp}"
 }
 
-!+]:: {
+$!+]:: {
     Send "^{PgDn}"
 }
 
@@ -115,26 +115,25 @@
 ; Alt + F ⇒ Find
 ; Alt + Shift + F ⇒ Find
 ; ----------
-!f:: Send "^f"
-!+f:: Send "^+f"
-!e:: Send "{F3}"
+$!f:: Send "^f"
+$!+f:: Send "^+f"
+$!e:: Send "{F3}"
 
 ; ----------
 ; Alt + R ⇒ Refresh
 ; Alt + Shift + R ⇒ Force Refresh
 ; ----------
-!r:: Send "^r"
-!+r:: Send "^+r"
+$!r:: Send "^r"
+$!+r:: Send "^+r"
 
 ; ----------
 ; Alt + , ⇒ Settings (for supporting apps)
 ; ----------
-!,:: Send "^,"
+$!,:: Send "^,"
 
 ; ----------
 ; Alt + L ⇒ URL bar
 ; ----------
-!l:: Send "^l"
 
 ; ----------
 ; Win + Alt + 2 ⇒ Split view
@@ -146,4 +145,4 @@ $#!2:: {
 
 $#!1:: {
     Send "#!1"
-}
+}$!l:: Send "^l"

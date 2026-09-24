@@ -10,7 +10,7 @@
 
 #HotIf WinActive("ahk_exe Arc.exe")
 
-!w:: {
+$!w:: {
     Send "^w"
 }
 
@@ -34,11 +34,11 @@ $#!2:: {
     Send "^+="
 }
 
-!+]:: {
+$!+]:: {
 ;    Send "^!{Down}"
 }
 
-!+[:: {
+$!+[:: {
 ;    Send "^!{Up}"
 }
 

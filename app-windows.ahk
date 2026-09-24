@@ -10,7 +10,7 @@
 ;
 ; Alt + Shift + H ⇒ Open Home page à la macOS
 ; ----------
-!+h:: Run "explorer.exe shell:Profile"
+$!+h:: Run "explorer.exe shell:Profile"
 
 ; ----------
 ; Media Keys
@@ -19,9 +19,9 @@
 ; End ⇒ Play / Pause    ⏯️
 ; Insert ⇒ Next track   ⏭️
 ; ----------
-Home::Send "{Media_Prev}"
-End::Send "{Media_Play_Pause}"
-Ins::Send "{Media_Next}"
+$Home::Send "{Media_Prev}"
+$End::Send "{Media_Play_Pause}"
+$Ins::Send "{Media_Next}"
 
 ; ----------
 ; Explorer app
@@ -33,27 +33,27 @@ Ins::Send "{Media_Next}"
 
 #HotIf WinActive("ahk_exe explorer.exe")
 
-!Down:: {
+$!Down:: {
     Send "{Enter}"
 }
 
-!+[:: {
     Send "^{Tab}"
+$!+[:: {
 }
 
-!+]:: {
     Send "^+{Tab}"
+$!+]:: {
 }
 
 #HotIf
 
 #HotIf WinActive("ahk_exe WindowsTerminal.exe")
 
-!+[:: {
+$!+[:: {
     Send "^{Tab}"
 }
 
-!+]:: {
+$!+]:: {
     Send "^+{Tab}"
 }
 
