@@ -134,15 +134,4 @@ $!,:: Send "^,"
 ; ----------
 ; Alt + L ⇒ URL bar
 ; ----------
-
-; ----------
-; Win + Alt + 2 ⇒ Split view
-; Win + Alt + 1 ⇒ Close splitted view
-; ----------
-$#!2:: {
-    Send "#!2"
-}
-
-$#!1:: {
-    Send "#!1"
-}$!l:: Send "^l"
+$!l:: Send "^l"
