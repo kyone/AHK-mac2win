@@ -37,12 +37,12 @@ $!Down:: {
     Send "{Enter}"
 }
 
-    Send "^{Tab}"
 $!+[:: {
+    Send "^+{Tab}"
 }
 
-    Send "^+{Tab}"
 $!+]:: {
+    Send "^{Tab}"
 }
 
 #HotIf
