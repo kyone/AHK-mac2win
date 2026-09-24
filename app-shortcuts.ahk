@@ -5,4 +5,3 @@
 #Include "app-dia.ahk"
 #Include "app-outlook.ahk"
 #Include "app-teams.ahk"
-#Include "app-sublimetext.ahk"
