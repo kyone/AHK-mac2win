@@ -79,23 +79,17 @@ $!+z:: Send "^y"
 ; Alt + T ⇒ New tab
 ; ----------
 $!n:: Send "^n"
-$!t:: {
-    Send "^t"
-}
+$!t:: Send "^t"
 
 ; ----------
 ; Alt + Q ⇒ Quit app
 ; ----------
-$!q:: {
-    Send "!{f4}"
-}
+$!q:: Send "!{f4}"
 
 ; ----------
 ; Alt + W ⇒ Close window
 ; ----------
-$!w:: {
-    Send "^{f4}"
-}
+$!w:: Send "^{f4}"
 
 ; ----------
 ; Navigate between tabs
@@ -103,13 +97,9 @@ $!w:: {
 ; Alt + Shift + [ ⇒ Previous tab
 ; Alt + Shift + ] ⇒ Next tab
 ; ----------
-$!+[:: {
-    Send "^{PgUp}"
-}
+$!+[:: Send "^{PgUp}"
 
-$!+]:: {
-    Send "^{PgDn}"
-}
+$!+]:: Send "^{PgDn}"
 
 ; ----------
 ; Alt + F ⇒ Find
